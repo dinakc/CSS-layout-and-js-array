@@ -4,30 +4,23 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const icecream = ["Chocolate","Strawberry","Banana", "Mango", "Matcha"];
+  
+  let listing_array =[]
+  for(let i = 0; i < icecream.length; i++ )
+  {
+    listing_array[i] = <button>{icecream[i]}</button>
+  }
+ 
+  console.log(listing_array)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    
+     <div className='header'>Icecream World!!! </div>
+     <div className='parag'> 24 hrs open icecream shop with variety or vegan and non-dairy options for when you want something sweet </div>
+     <div className='option'> FLAVOURS</div>
+     <div className='lists'> {listing_array} </div>
     </>
   )
 }
